@@ -1,0 +1,64 @@
+h1 {
+    color: orangered;
+    font-family: 'Creepster', cursive;
+    font-size: 400%;
+    text-align: center;
+}
+
+h2 {
+    color:whitesmoke;
+    text-align: center;
+    font-size: 200%;
+}
+
+h3 {
+    color:whitesmoke;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;    
+
+  }
+
+.button-align-center {
+    text-align: center;
+}
+
+.choice-block {
+    text-align: center;
+    height: 200px;
+    width: 50%;
+}
+
+.button-align-left {
+    text-align: left;
+}
+
+.button-align-right {
+    text-align: right;
+}
