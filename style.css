@@ -47,18 +47,17 @@ img {
 
 .button-align-center {
     text-align: center;
+    font-family: monospace;
 }
 
 .choice-block {
     text-align: center;
-    height: 200px;
+    height: 400px;
     width: 50%;
 }
 
-.button-align-left {
-    text-align: left;
-}
-
-.button-align-right {
-    text-align: right;
+.label {
+    color:whitesmoke;
+    text-align: center;
+    font-size: 125%;
 }
