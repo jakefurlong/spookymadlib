@@ -7,6 +7,7 @@
         <title>The Spooky Scary MadLib Generator</title>
         <meta name="description" content="A fun MadLib generator powered by Python and AWS">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://assets.dryicons.com/uploads/icon/svg/11386/f55ab21a-b027-45a8-9040-ac1b986ea3d2.svg" type="image/icon type">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,76 +15,163 @@
         <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Libre+Baskerville&display=swap" rel="stylesheet">
     </head>
     <body>
+    
         <div>
             <h1>The Spooky Scary MadLib Generator</h1>
         </div>
-        <br>
+        <audio controls autoplay>
+            <source src="spooky.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
         <div>
             <h2><em>Choose your fate. Enter a response for each option.</em></h2>
         </div>
-        
+    
 
         <div>
             <table width="auto" align="center">
                 <tr>
-                    <td>Room or building (eg. barn, attic):<input type="text" id="q1"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q11"</td width="auto">
-                    <td>Verb (-ing): <input type="text" id="q21"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q31"</td width="auto">
+                    <td>Room or building (eg. barn, attic):
+                        <label class="custom-field">
+                            <input type="text" id="q1"/>
+                            
+                        </label>
+                    </td>
+                    <td>Past tense verb:
+                            <input type="text" id="q11"/>
+                    </td>
+                    <td>Verb (-ing): 
+                        <input type="text" id="q21"/>
+                    </td>
+                    <td>Past tense verb: 
+                        <input type="text" id="q31"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Adjective: <input type="text" id="q2"</td width="auto">
-                    <td>Number: <input type="text" id="q12"</td width="auto">
-                    <td>Present tense verb: <input type="text" id="q22"</td width="auto">
-                    <td>Body parts (plural): <input type="text" id="q32"</td width="auto">
+                    <td>Adjective: 
+                        <input type="text" id="q2"/>
+                    </td>
+                    <td>Number: 
+                        <input type="text" id="q12"/>
+                    </td>
+                    <td>Present tense verb: 
+                        <input type="text" id="q22"/>
+                    </td>
+                    <td>Body parts (plural): 
+                        <input type="text" id="q32"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Adjective: <input type="text" id="q3"</td width="auto">
-                    <td>Body part: <input type="text" id="q13"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q23"</td width="auto">
-                    <td>Verb (-ing): <input type="text" id="q33"</td width="auto">
+                    <td>Adjective: 
+                        <input type="text" id="q3"/>
+                    </td>
+                    <td>Body part: 
+                        <input type="text" id="q13"/>
+                    </td>
+                    <td>Past tense verb: 
+                        <input type="text" id="q23"/>
+                    </td>
+                    <td>Verb (-ing): 
+                        <input type="text" id="q33"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Something that gives off an odor: <input type="text" id="q4"</td width="auto">
-                    <td>Past tense (-ed) verb: <input type="text" id="q14"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q24"</td width="auto">
-                    <td>Adjective: <input type="text" id="q34"</td width="auto">
+                    <td>Something that gives off an odor: 
+                        <input type="text" id="q4"/>
+                    </td>
+                    <td>Past tense (-ed) verb: 
+                        <input type="text" id="q14"/>
+                    </td>
+                    <td>Past tense verb: 
+                        <input type="text" id="q24"/>
+                    </td>
+                    <td>Adjective: 
+                        <input type="text" id="q34"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Adjective: <input type="text" id="q5"</td width="auto">
-                    <td>Adverb (-ly): <input type="text" id="q15"</td width="auto">
-                    <td>Present tense verb: <input type="text" id="q25"</td width="auto">
-                    <td>Verb (-ing): <input type="text" id="q35"</td width="auto">
+                    <td>Adjective: 
+                        <input type="text" id="q5"/>
+                    </td>
+                    <td>Adverb (-ly): 
+                        <input type="text" id="q15"/>
+                    </td>
+                    <td>Present tense verb: 
+                        <input type="text" id="q25"/>
+                    </td>
+                    <td>Verb (-ing): 
+                        <input type="text" id="q35"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Adjective: <input type="text" id="q6"</td width="auto">
-                    <td>Present tense verb: <input type="text" id="q16"</td width="auto">
-                    <td>Name of someone you know: <input type="text" id="q26"</td width="auto">
-                    <td>Adverb: <input type="text" id="q36"</td width="auto">
+                    <td>Adjective: 
+                        <input type="text" id="q6"/>
+                    </td>
+                    <td>Present tense verb: 
+                        <input type="text" id="q16"/>
+                    </td>
+                    <td>Name of someone you know: 
+                        <input type="text" id="q26"/>
+                    </td>
+                    <td>Adverb: 
+                        <input type="text" id="q36"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Thing (singular noun): <input type="text" id="q7"</td width="auto">
-                    <td>Adjective: <input type="text" id="q17"</td width="auto">
-                    <td>Verb (-ing): <input type="text" id="q27"</td width="auto">
-                    <td>Name of someone you know: <input type="text" id="q37"</td width="auto">
+                    <td>Thing (singular noun): 
+                        <input type="text" id="q7"/>
+                    </td>
+                    <td>Adjective: 
+                        <input type="text" id="q17"/>
+                    </td>
+                    <td>Verb (-ing): 
+                        <input type="text" id="q27"/>
+                    </td>
+                    <td>Name of someone you know: 
+                        <input type="text" id="q37"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Thing (singular noun): <input type="text" id="q8"</td width="auto">
-                    <td>Thing (singular noun): <input type="text" id="q18"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q28"</td width="auto">
-                    <td>Verb (-ing): <input type="text" id="q38"</td width="auto">
+                    <td>Thing (singular noun): 
+                        <input type="text" id="q8"/>
+                    </td>
+                    <td>Thing (singular noun): 
+                        <input type="text" id="q18"/>
+                    </td>
+                    <td>Past tense verb: 
+                        <input type="text" id="q28"/>
+                    </td>
+                    <td>Verb (-ing): 
+                        <input type="text" id="q38"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Adjective: <input type="text" id="q9"</td width="auto">
-                    <td>Thing (singular noun): <input type="text" id="q19"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q29"</td width="auto">
-                    <td>Things (plural noun): <input type="text" id="q39"</td width="auto">
+                    <td>Adjective: 
+                        <input type="text" id="q9"/>
+                    </td>
+                    <td>Thing (singular noun): 
+                        <input type="text" id="q19"/>
+                    </td>
+                    <td>Past tense verb: 
+                        <input type="text" id="q29"/>
+                    </td>
+                    <td>Things (plural noun): 
+                        <input type="text" id="q39"/>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Present tense verb: <input type="text" id="q10"</td width="auto">
-                    <td>Present tense verb: <input type="text" id="q20"</td width="auto">
-                    <td>Past tense verb: <input type="text" id="q30"</td width="auto">
-                    <td>Thing (singular noun): <input type="text" id="q40"</td width="auto">
+                    <td>Present tense verb: 
+                        <input type="text" id="q10"/>
+                    </td>
+                    <td>Present tense verb: 
+                        <input type="text" id="q20"/>
+                    </td>
+                    <td>Past tense verb: 
+                        <input type="text" id="q30"/>
+                    </td>
+                    <td>Thing (singular noun): 
+                        <input type="text" id="q40"/>
+                    </td>
                 </tr>
             </table>
         </div>
