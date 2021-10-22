@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Spooky Scary MadLib Generator</title>
+        <meta name="description" content="A fun MadLib generator powered by Python and AWS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Libre+Baskerville&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <h1>The Spooky Scary MadLib Generator</h1>
+        </div>
+        <br>
+        <div>
+            <h2><em>Choose your fate. Enter a response for each option.</em></h2>
+        </div>
+        
+
+        <div>
+            <table width="auto" align="center">
+                <tr>
+                    <td>Room or building (eg. barn, attic):<input type="text" id="q1"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q11"</td width="auto">
+                    <td>Verb (-ing): <input type="text" id="q21"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q31"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Adjective: <input type="text" id="q2"</td width="auto">
+                    <td>Number: <input type="text" id="q12"</td width="auto">
+                    <td>Present tense verb: <input type="text" id="q22"</td width="auto">
+                    <td>Body part: <input type="text" id="q32"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Adjective: <input type="text" id="q3"</td width="auto">
+                    <td>Body part: <input type="text" id="q13"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q23"</td width="auto">
+                    <td>Verb (-ing): <input type="text" id="q33"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Something that gives off an odor: <input type="text" id="q4"</td width="auto">
+                    <td>Past tense (-ed) verb: <input type="text" id="q14"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q24"</td width="auto">
+                    <td>Adjective: <input type="text" id="q34"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Adjective: <input type="text" id="q5"</td width="auto">
+                    <td>Adverb (-ly): <input type="text" id="q15"</td width="auto">
+                    <td>Present tense verb: <input type="text" id="q25"</td width="auto">
+                    <td>Verb (-ing): <input type="text" id="q35"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Adjective: <input type="text" id="q6"</td width="auto">
+                    <td>Present tense verb: <input type="text" id="q16"</td width="auto">
+                    <td>Name of someone you know: <input type="text" id="q26"</td width="auto">
+                    <td>Adverb: <input type="text" id="q36"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Thing (singular noun): <input type="text" id="q7"</td width="auto">
+                    <td>Adjective: <input type="text" id="q17"</td width="auto">
+                    <td>Verb (-ing): <input type="text" id="q27"</td width="auto">
+                    <td>Name of someone you know: <input type="text" id="q37"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Thing (singular noun): <input type="text" id="q8"</td width="auto">
+                    <td>Thing (singular noun): <input type="text" id="q18"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q28"</td width="auto">
+                    <td>Verb (-ing): <input type="text" id="q38"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Adjective: <input type="text" id="q9"</td width="auto">
+                    <td>Thing (singular noun): <input type="text" id="q19"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q29"</td width="auto">
+                    <td>Things (plural noun): <input type="text" id="q39"</td width="auto">
+                </tr>
+                <tr>
+                    <td>Present tense verb: <input type="text" id="q10"</td width="auto">
+                    <td>Present tense verb: <input type="text" id="q20"</td width="auto">
+                    <td>Past tense verb: <input type="text" id="q30"</td width="auto">
+                    <td>Thing (singular noun): <input type="text" id="q40"</td width="auto">
+                </tr>
+            </table>
+        </div>
+        <br><br>
+
+
+        <button id="lib-button">Let's Get Spooky!</button>
+
+        <div class="spooky_story">
+        <p id="story"></p>
+        </div>
+     
+        <script>
+            var libButton = document.getElementById('lib-button');
+            var libIt = function() {
+                var q1 = document.getElementById("q1").value;
+                var q2 = document.getElementById("q2").value;
+                var q3 = document.getElementById("q3").value;
+                var q4 = document.getElementById("q4").value;
+                var q5 = document.getElementById("q5").value;
+                var q6 = document.getElementById("q6").value;
+                var q7 = document.getElementById("q7").value;
+                var q8 = document.getElementById("q8").value;
+                var q9 = document.getElementById("q9").value;
+                var q10 = document.getElementById("q10").value;
+                var q11 = document.getElementById("q11").value;
+                var q12 = document.getElementById("q12").value;
+                var q13 = document.getElementById("q13").value;
+                var q14 = document.getElementById("q14").value;
+                var q15 = document.getElementById("q15").value;
+                var q16 = document.getElementById("q16").value;
+                var q17 = document.getElementById("q17").value;
+                var q18 = document.getElementById("q18").value;
+                var q19 = document.getElementById("q19").value;
+                var q20 = document.getElementById("q20").value;
+                var q21 = document.getElementById("q21").value;
+                var q22 = document.getElementById("q22").value;
+                var q23 = document.getElementById("q23").value;
+                var q24 = document.getElementById("q24").value;
+                var q25 = document.getElementById("q25").value;
+                var q26 = document.getElementById("q26").value;
+                var q27 = document.getElementById("q27").value;
+                var q28 = document.getElementById("q28").value;
+                var q29 = document.getElementById("q29").value;
+                var q30 = document.getElementById("q30").value;
+                var q31 = document.getElementById("q31").value;
+                var q32 = document.getElementById("q32").value;
+                var q33 = document.getElementById("q33").value;
+                var q34 = document.getElementById("q34").value;
+                var q35 = document.getElementById("q35").value;
+                var q36 = document.getElementById("q36").value;
+                var q37 = document.getElementById("q37").value;
+                var q38 = document.getElementById("q38").value;
+                var q39 = document.getElementById("q39").value;
+                var q40 = document.getElementById("q40").value;
+                
+    
+                var storyDiv = document.getElementById("story");
+                storyDiv.innerHTML = "We weren't allowed to go in the " + q1 + " and we really didn't want to -- it was " + q2 + 
+                " and " + q3 + " and smelled like " + q4 + ". The steps leading down into the " + q1 + " were " + q5 + " and there was a "
+                + q6 + " " + q7 + " next to the " + q8 + ". It felt " + q9 + " and we wanted to " + q10 + ". We " + q11 + " toward the " + q1 + 
+                ", " + q12 + " steps at a time until our " + q13 + "s " + q14 + " " + q15 + " and we were too scared to " + q16 + ". There was always a "
+                + q17 + " " + q18 + " coming up from below the " + q19 + " and we weren't brave enough to " + q20 + " it. One day, there was a " +
+                q21 + " sound. It was coming from the " + q1 + ". We wanted to know what was making the sound, but we were afraid we might " + 
+                q22 + ". We " + q23 + " and " + q24 + ", but each time the fear would " + q25 + " over us, and we would back away, terrified. Finally, " +
+                q26 + " decided to face the fear and go down to the " + q1 + ". When we didn't hear " + q27 +
+                " we became encouraged and followed behind, praying we would not be " + q28 + " by whatever it was that " + q29 + " and " + q30 + 
+                " down there. When we made it to the very bottom, we " + q31 + ", " + q32 + "s wrapped tightly around each other, barely " +
+                q33 + ". Then, we saw it. It was " + q34 + " and it was " + q35 + " " + q36 + ". We moved closer. We couldn't breathe... It was " + 
+                q37 + " " + q38 + " the " + q39 + " in the " + q40 + "."
+                
+            
+            }
+            libButton.addEventListener('click', libIt);
+            
+        </script>
+
+    </body>
+</html>
