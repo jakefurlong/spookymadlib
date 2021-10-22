@@ -45,6 +45,10 @@ td {
     font-size: 100%;
 }
 
+button-align-center {
+  color: green;
+}
+
 .container {
   background-color: green;
   border: none;
